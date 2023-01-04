@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: auto;
+    border: 1px solid green;
+    height: 50px;
+    ul {
+        li{
+            border: 1px solid green; 
+        }
+        li, a {
+            display: flex;
+            justify-content: center;
+            float: left;
+            padding-left: 10px;
+            padding-right: 10px;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+    }
+}
