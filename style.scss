@@ -14,15 +14,32 @@ nav {
     align-items: center;
     background-color: white;
     width: auto;
-    border: 1px solid green;
-    height: 50px;
+    height: 60px;
+    box-shadow: 0px 1px 5px black;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: .5;
+        border: 2px solid greenyellow;
+    }
     ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        flex: 4;
+        border: 2px solid greenyellow;
         li{
-            border: 1px solid green; 
-        }
-        li, a {
             display: flex;
             justify-content: center;
+            align-items: center;
+            transition: 250ms;
+            border-radius: 8px;
+            border: 2px solid greenyellow;
+
+        }
+        li, a {
             float: left;
             padding-left: 10px;
             padding-right: 10px;
@@ -32,4 +49,28 @@ nav {
             font-size: 20px;
         }
     }
+    .gear-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px rgb(42, 66, 5);
+        border: 2px solid greenyellow;
+        flex: .5;
+        .gear {
+            width: 60px;
+            height: 25px;
+            transition: 650ms;
+        }
+    }
 }
+
+li:hover {
+    background-color: rgba(136, 87, 216, 0.949);
+    transform: scale(1.7);
+    box-shadow: 0px 0px 4px black;
+}
+
+.gear:hover {
+    transform: rotate(360deg);
+} 
+
