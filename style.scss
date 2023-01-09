@@ -8,6 +8,7 @@
 body {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 nav {
@@ -17,7 +18,10 @@ nav {
     background-color: white;
     width: auto;
     height: 60px;
-    box-shadow: 0px 1px 5px black;
+    border: 1px solid yellowgreen;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
     .logo {
         display: flex;
         justify-content: center;
@@ -52,6 +56,13 @@ nav {
             transition: 200ms;
         }
     }
+
+    @if(10 > 2) {
+        nav {
+            box-shadow: 0px 0px 3px black;
+        }
+    }
+
     .gear-container {
         display: flex;
         justify-content: center;
@@ -149,6 +160,29 @@ main {
     }
 }
 
+#content {
+    overflow-y: scroll;
+    height: 100vh;
+}
+
 textarea::placeholder {
     color: rgb(193, 193, 193);
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#content::-webkit-scrollbar {
+    width: 10px;
+}
+
+#content::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+}
+
+#content::-webkit-scrollbar-thumb {
+    background-color: rgba(136, 87, 216, 0.379);
+    border-radius: 50px;
+}
+
