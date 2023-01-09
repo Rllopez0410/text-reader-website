@@ -2,11 +2,18 @@ const textInput = document.getElementById('txt');
 const playAudio = document.getElementById('play');
 const PauseAudio = document.getElementById('pause');
 const resumeAudio = document.getElementById('resume');
+const section = document.getElementById('content');
+
+section.addEventListener("scroll", function() {
+    if (section.scrollTop >= 1) {
+      document.querySelector("nav").style.boxShadow = "0px 0px 5px black";
+    } else {
+      document.querySelector("nav").style.boxShadow = "none";
+    }
+});
 
 let a = '';
 let click = false;
-
-
 
 playAudio.addEventListener('click', () => {
     a = textInput.value;
