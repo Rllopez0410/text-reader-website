@@ -30,6 +30,9 @@ function speech(text) {
     speechSynthesis.speak(utterance)
 }
 
+//Create a function that allows the user to pick the speed of the reader
+//if the user picks the value of 1 the speed should equal to slow.
+
 function stopSpeech() {
     speechSynthesis.pause();
 }
