@@ -23,16 +23,15 @@ playAudio.addEventListener('click', () => {
     } else if (clickPause) {
         resumeSpeech();
     }
-    document.getElementById('pause').style.color="black";
-    document.getElementById('play').style.color="red";
-    document.getElementById('stop').style.color="black";
+    document.getElementById('pause').style.color = "black";
+    document.getElementById('stop').style.color = "black";
 });
 
 dltbtn.addEventListener('click', () => {
     textInput.value = "";
-    document.getElementById('pause').style.color="black";
-    document.getElementById('play').style.color="black";
-    document.getElementById('stop').style.color="black";
+    document.getElementById('pause').style.color = "black";
+    document.getElementById('play').style.color = "black";
+    document.getElementById('stop').style.color = "black";
 });
 
 pauseAudio.addEventListener('click', pauseSpeech);
@@ -40,10 +39,16 @@ pauseAudio.addEventListener('click', pauseSpeech);
 stopAudio.addEventListener('click', stopSpeech);
 
 function speech(text) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    speechSynthesis.speak(utterance);
     //Create a condition that does not allow the user to click the play button
     //again while the synthesis is speaking.
+        const utterance = new SpeechSynthesisUtterance(text);
+        speechSynthesis.speak(utterance);
+        document.getElementById('play').style.color = "red";
+        textInput.disabled = true;
+        utterance.addEventListener('end', () => {
+            textInput.disabled = false;
+            document.getElementById('play').style.color = "black";
+        });
 }
 
 //Create a function that allows the user to pick the speed of the reader
@@ -52,9 +57,9 @@ function speech(text) {
 function pauseSpeech() {
     speechSynthesis.pause();
     clickPause = true;
-    document.getElementById('pause').style.color="red";
-    document.getElementById('play').style.color="black";
-    document.getElementById('stop').style.color="black";
+    document.getElementById('pause').style.color = "red";
+    document.getElementById('play').style.color = "black";
+    document.getElementById('stop').style.color = "black";
 }
 
 function resumeSpeech() {
@@ -65,8 +70,8 @@ function resumeSpeech() {
 function stopSpeech() {
     if (!clickPause || clickPause) {
         speechSynthesis.cancel();
-        document.getElementById('pause').style.color="black";
-        document.getElementById('play').style.color="black";
-        document.getElementById('stop').style.color="red";
+        document.getElementById('pause').style.color = "black";
+        document.getElementById('play').style.color = "black";
+        document.getElementById('stop').style.color = "red";
     }
 }
