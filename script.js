@@ -4,6 +4,9 @@ const stopAudio = document.getElementById('stop');
 const pauseAudio = document.getElementById('pause');
 const section = document.getElementById('content');
 const dltbtn = document.getElementById('delete');
+//Create a quarySelectAll to make an array of options that will allow users to
+//change and pick the speed of the reader.
+
 
 let a = '';
 let clickPause = false;
@@ -39,8 +42,6 @@ pauseAudio.addEventListener('click', pauseSpeech);
 stopAudio.addEventListener('click', stopSpeech);
 
 function speech(text) {
-    //Create a condition that does not allow the user to click the play button
-    //again while the synthesis is speaking.
         const utterance = new SpeechSynthesisUtterance(text);
         speechSynthesis.speak(utterance);
         document.getElementById('play').style.color = "red";
