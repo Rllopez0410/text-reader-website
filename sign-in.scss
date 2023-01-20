@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$purple: rgba(136, 87, 216, 0.949);
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+@mixin display() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+nav {
+    @include display();
+    background-color: white;
+    width: auto;
+    height: 60px;
+    border: 1px solid yellowgreen;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    .logo {
+        @include display();
+        flex: .5;
+        border: 2px solid greenyellow;
+    }
+    ul {
+        @include display();
+        gap: 20px;
+        flex: 4;
+        border: 2px solid greenyellow;
+        li{
+            font-family: 'Bungee Shade', cursive;
+            @include display();
+            transition: 250ms;
+            border-radius: 8px;
+            border: 2px solid greenyellow;
+        }
+        li, a {
+            float: left;
+            padding-left: 10px;
+            padding-right: 10px;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: 200ms;
+        }
+    }
+
+    .gear-container {
+        @include display();
+        border: 2px rgb(42, 66, 5);
+        border: 2px solid greenyellow;
+        flex: .5;
+        .gear {
+            width: 60px;
+            height: 25px;
+            transition: 650ms;
+        }
+    }
+}
+
+li:hover {
+    background-color: $purple;
+    transform: scale(1.3);
+    box-shadow: 0px 0px 4px black;
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+.gear:hover {
+    transform: rotate(360deg);
+}
+
+section {
+    @include display();
+    flex-direction: column;
+    border: 1px solid greenyellow;
+    aside {
+        border: 1px solid greenyellow;
+    }
+    main {
+        border: 1px solid greenyellow;
+    }
+}
