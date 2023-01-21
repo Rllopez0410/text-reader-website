@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-$purple: rgba(136, 87, 216, 0.949);
+$purple: #715DF2;
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
@@ -19,32 +19,48 @@ body {
     flex-direction: column;
     overflow-y: auto;
 }
+.custom-shape-divider-top-1674259429 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: 0;
+}
 
+.custom-shape-divider-top-1674259429 svg {
+    position: relative;
+    display: block;
+    width: calc(169% + 1.3px);
+    height: 500px;
+}
+
+.custom-shape-divider-top-1674259429 .shape-fill {
+    fill: $purple;
+}
 nav {
     @include display();
-    background-color: white;
+    background-color: $purple;
     width: auto;
     height: 60px;
-    border: 1px solid yellowgreen;
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 3;
     .logo {
         @include display();
         flex: .5;
-        border: 2px solid greenyellow;
     }
     ul {
         @include display();
         gap: 20px;
         flex: 4;
-        border: 2px solid greenyellow;
         li{
             font-family: 'Bungee Shade', cursive;
             @include display();
             transition: 250ms;
             border-radius: 8px;
-            border: 2px solid greenyellow;
         }
         li, a {
             float: left;
@@ -52,16 +68,23 @@ nav {
             padding-right: 10px;
             list-style: none;
             text-decoration: none;
-            color: black;
             font-size: 16px;
             transition: 200ms;
+            color: black;
+        }
+        li.active {
+            background-color: $purple
+        }
+        a.active {
+            color: white;
+            text-shadow: 0px 5px 8px black
+        
         }
     }
 
     .gear-container {
         @include display();
         border: 2px rgb(42, 66, 5);
-        border: 2px solid greenyellow;
         flex: .5;
         .gear {
             width: 60px;
@@ -71,15 +94,14 @@ nav {
     }
 }
 
-li:hover {
+li:hover:not(.active) {
     background-color: $purple;
     transform: scale(1.3);
     box-shadow: 0px 0px 4px black;
-    color: white;
-}
-
-a:hover {
-    color: white;
+    a:hover {
+        color: white;
+        text-shadow: 0px 3px 5px black;
+    }
 }
 
 .gear:hover {
@@ -93,7 +115,9 @@ header {
     h1 {
         font-family: 'Bungee Shade', cursive;
         font-size: 60px;
-        border: 1px greenyellow;
+        color: white;
+        text-shadow: 0px 5px 8px black;
+        z-index: 2;
     }
     .info {
         @include display();
@@ -106,6 +130,7 @@ header {
         font-size: 16px;
         max-width: 650px;
         box-shadow: 0px 0px 5px black;
+        z-index: 1;
         strong {
             color: $purple;
             font-size: 19px;
@@ -128,10 +153,11 @@ main {
             @include display();
             width: 50px;
             height: 50px;
-            border: none;
+            border: 1px solid white;
             border-radius: 100px;
             background-color: $purple;
             cursor: pointer;
+            z-index: 1;
         }
     }
     textarea {
@@ -146,6 +172,7 @@ main {
         padding: 10px;
         font-size: 16px;
         box-shadow: 0px 0px 5px;
+        z-index: 1;
     }
 }
 
@@ -160,18 +187,22 @@ textarea::placeholder {
 
 body::-webkit-scrollbar {
     display: none;
+    z-index: 2;
 }
 
 #content::-webkit-scrollbar {
     width: 10px;
+    z-index: 2;
 }
 
 #content::-webkit-scrollbar-track {
     background-color: rgb(255, 255, 255);
+    z-index: 2;
+
 }
 
 #content::-webkit-scrollbar-thumb {
-    background-color: rgba(136, 87, 216, 0.379);
+    background-color: $purple;
     border-radius: 50px;
+    z-index: 2;
 }
-
