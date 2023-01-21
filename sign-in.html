@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="spacer layer1">
     <nav>
         <div class="logo">
             logo
@@ -17,22 +18,23 @@
             <li><a href="#">Tutorial</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#">Sign In</a></li>
+            <li class="active"><a class="active" href="#">Sign In</a></li>
         </ul>
         <div class="gear-container">
             <img class="gear" src="../gear.png" alt="">
         </div>
     </nav>
     <section>
-        <aside>
-            <img src="" alt="">
-        </aside>
-        <main>
-            <form action="#">
-
-            </form>
-        </main>
+        <div class="info">
+            <p>
+                Create an account to recieve updates and have access to more features. Already have an account? <a class="login" href="">Log in</a>.
+            </p>
+        </div>
+        <form action="">
+            <label for="fname">First Name</label>
+            <input type="text">
+        </form>
     </section>
+    </div>
 </body>
-<script src="../script.js"></script>
 </html>
