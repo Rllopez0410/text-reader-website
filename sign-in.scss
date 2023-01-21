@@ -73,13 +73,11 @@ nav {
         a.active {
             color: white;
             text-shadow: 0px 5px 8px black
-        
         }
     }
 
     .gear-container {
         @include display();
-        border: 2px rgb(42, 66, 5);
         flex: .5;
         .gear {
             width: 60px;
@@ -100,6 +98,7 @@ li:hover:not(.active) {
 
 a:hover {
     color: white;
+    text-shadow: 0px 3px 5px black;
 }
 
 .gear:hover {
@@ -129,7 +128,6 @@ a:hover {
 section {
     @include display();
     flex-direction: column;
-    border: 2px solid black;
     z-index: 1;
     form {
         @include display();
