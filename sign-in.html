@@ -30,10 +30,18 @@
                 Create an account to recieve updates and have access to more features. Already have an account? <a class="login" href="">Log in</a>.
             </p>
         </div>
-        <form action="">
-            <label for="fname">First Name</label>
-            <input type="text">
-        </form>
+        <div class="outline">
+            <form action="">
+                <section class="form-section">
+                    <input id="fname" type="text" required minlength="1" placeholder="First Name">
+                    <input id="lname" type="text" placeholder="Last Name">
+                    <input id="username" type="text" required minlength="1" placeholder="Username">
+                    <input type="email" required placeholder="Email">
+                    <input type="text" name="Password" id="" placeholder="Create Password" required>
+                    <input type="text" name="cpassword" id="" placeholder="Confirm Password" required>
+                </section>
+            </form>
+        </div>
     </section>
     </div>
 </body>
