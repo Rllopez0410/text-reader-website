@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="sign-in.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Document</title>
 </head>
 <body>
@@ -23,7 +24,7 @@
             <li class="active"><a class="active" href="#">Sign In</a></li>
         </ul>
         <div class="gear-container">
-            <span class="material-symbols-outlined">
+            <span id="gear" class="material-symbols-outlined">
                 settings
                 </span>
         </div>
@@ -40,10 +41,51 @@
                     <h1 class="txt">Sign Up</h1>
                 </div>
                 <section class="form-section">
-                    <input class="form-input" id="fname" type="text" required minlength="1" placeholder="First Name">
-                    <input class="form-input" id="lname" type="text" placeholder="Last Name">
-                    <input class="form-input" id="username" type="text" required minlength="1" placeholder="Username">
-                    <input class="form-input" type="email" required placeholder="Email">
+                    <div class="form-input">
+                        <input class="field"  id="fname" type="text" placeholder="First Name">
+                        <div class="validation">
+                            <span id="check" class="material-symbols-outlined">
+                            check_circle
+                            </span>
+                            <span id="not-valid" class="material-symbols-outlined">
+                                cancel
+                            </span>
+                        </div>
+                    </div>
+                    <div id="fname-message"><p>Please fill the feild above with your first name.</p></div>
+
+                    <div class="form-input">
+                        
+                        <input class="field" id="lname" type="text" placeholder="Last Name">
+                    
+                    </div>
+                    
+                    <div class="form-input">
+                        <input class="field" id="username" type="text" placeholder="Username">
+                        <div class="validation">
+                            <span id="check1" class="material-symbols-outlined">
+                            check_circle
+                            </span>
+                            <span id="not-valid1" class="material-symbols-outlined">
+                                cancel
+                            </span>
+                        </div>
+                    </div>
+                    <div id="username-message"><p>Please create a username.</p></div>
+
+                    <div class="form-input">
+                        <input class="field" id="email" type="text" placeholder="Email">
+                        <div class="validation">
+                            <span id="check2" class="material-symbols-outlined">
+                            check_circle
+                            </span>
+                            <span id="not-valid2" class="material-symbols-outlined">
+                                cancel
+                            </span>
+                        </div>
+                    </div>
+                    <div id="email-message"><p>Please enter a valid email address</p></div>
+                    
                     <input class="form-input" type="password" name="Password" title="please create a password" id="create-passwrd" placeholder="Create Password" 
                     pattern="[A-Za-z0-9!@#$]{8,20}" required>
                     <input class="form-input" type="password" name="cpassword" id="confirm-passwrd" title="Please confirm your password." placeholder="Confirm Password" required>
