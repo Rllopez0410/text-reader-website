@@ -270,6 +270,24 @@ section {
     }  
 }
 
+.validation {
+    position: relative;
+    #check3 {
+        position: absolute;
+        top: -12px;
+        left: -10px;
+        visibility: hidden;
+        color: $valid;
+    }
+    #not-valid3 {
+        position: absolute;
+        top: -12px;
+        left: -10px;
+        visibility: hidden;
+        color: red;
+    }  
+}
+
 #fname-message {
     display: none;
     color: red;
