@@ -86,13 +86,33 @@
                     </div>
                     <div id="email-message"><p>Please enter a valid email address</p></div>
                     
-                    <input class="form-input" type="password" name="Password" title="please create a password" id="create-passwrd" placeholder="Create Password" 
-                    pattern="[A-Za-z0-9!@#$]{8,20}" required>
-                    <input class="form-input" type="password" name="cpassword" id="confirm-passwrd" title="Please confirm your password." placeholder="Confirm Password" required>
+                    <div class="form-input">
+                        <input class="field" type="password" name="Password" id="create-passwrd" placeholder="Create Password">
+                        <div class="validation">
+                            <span id="check3" class="material-symbols-outlined">
+                            check_circle
+                            </span>
+                            <span id="not-valid3" class="material-symbols-outlined">
+                                cancel
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-input">
+                        <input class="field" type="password" name="cpassword" id="confirm-passwrd" title="Please confirm your password." placeholder="Confirm Password">
+                        <div class="validation">
+                            <span id="check3" class="material-symbols-outlined">
+                            check_circle
+                            </span>
+                            <span id="not-valid3" class="material-symbols-outlined">
+                                cancel
+                            </span>
+                        </div>
+                    </div>
                 </section>
             </form>
         </div>
-        <input form="sign-up"  type="submit" id="submit-btn" value="Create Account">
+        <input type="submit" id="submit-btn" value="Create Account">
     </section>
     </div>
 <script src="sign-in.js"></script>
