@@ -83,7 +83,7 @@ nav {
         @include display();
         border: 2px rgb(42, 66, 5);
         flex: .5;
-        #gear {
+        .material-symbols-outlined {
             @include display();
             width: 60px;
             height: 25px;
@@ -111,7 +111,7 @@ li:hover:not(.active) {
     }
 }
 
-#gear {
+.material-symbols-outlined:hover {
     transform: rotate(360deg);
 }
 
