@@ -61,7 +61,7 @@ function validEMail() {
 }
 
 function validatePassword() {
-    const regx = new RegExp(/^[A-Za-z_!@#$%&'*+\/=?`{|}~^.-]{8,20}$/);
+    const regx = new RegExp(/^[A-Za-z0-9_!@#$%&'*+\/=?`{|}~^.-]{8,20}$/);
     const password = createPassword.value;
     
     if (regx.test(password)) {
@@ -82,8 +82,17 @@ function matchPassword() {
     if (password2 === "") {
         alert("please confirm password");
         submitBtn.removeEventListener('click', matchPassword);
+        submitBtn.addEventListener ('click', function() {
+            location.reload();
+        }); 
+    } else if (!password1 === password2) {
+        submitBtn.removeEventListener('click', matchPassword);
+        submitBtn.addEventListener ('click', function() {
+            location.reload();
+        });
     } else if (password1 === password2) {
         alert("Account created");
+        submitBtn.setAttribute("form", "sign-up")
         submitBtn.addEventListener('click', matchPassword);
     }
 }
